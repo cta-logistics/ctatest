@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Demande de cotation — CTA LOGISTICS</title>
+<meta name="description" content="Demandez une cotation pour le Protocole Chaîne Fermée ou une traction Roissy CDG. Réponse sous 24 heures ouvrées.">
+<meta name="theme-color" content="#0A1F3D">
+
+<meta property="og:title" content="Demande de cotation — CTA LOGISTICS">
+<meta property="og:description" content="Demandez une cotation pour le Protocole Chaîne Fermée ou une traction Roissy CDG. Réponse sous 24 heures ouvrées.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="site-header">
+ <div class="container nav">
+  <a class="brand" href="index.html" aria-label="CTA LOGISTICS — accueil">
+   <span class="brand-mark">CTA</span><span class="brand-rule"></span><span class="brand-name">Logistics</span>
+  </a>
+  <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="navLinks">
+   <li><a href="index.html">Accueil</a></li>
+   <li><a href="protocole-chaine-fermee.html">Protocole Chaîne Fermée</a></li>
+   <li><a href="traction-roissy-cdg.html">Traction Roissy CDG</a></li>
+   <li><a class="nav-cta" href="devis.html" aria-current="page">Demander une cotation</a></li>
+  </ul>
+ </div>
+</header>
+<main id="main">
+<section class="section section-ivory" style="padding-top:clamp(48px,6vw,80px)">
+ <div class="container">
+  <div class="section-head">
+   <span class="eyebrow">Cotation</span>
+   <h1 style="font-size:clamp(2.2rem,5vw,3.6rem)">Décrivez votre mission.</h1>
+   <p class="lead">Quelques informations suffisent. Notre équipe vous répond avec une cotation sous 24 heures ouvrées.</p>
+  </div>
+  <div class="form-layout">
+   <div class="form-card">
+    <form id="quoteForm" novalidate>
+     <div class="hp" aria-hidden="true"><label for="website">Ne pas remplir</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
+
+     <fieldset>
+      <legend>Votre offre</legend>
+      <div class="choice" role="radiogroup" aria-label="Type de prestation">
+       <label><input type="radio" name="offre" value="chaine-fermee" checked> Chaîne Fermée</label>
+       <label><input type="radio" name="offre" value="traction-cdg"> Traction Roissy CDG</label>
+       <label><input type="radio" name="offre" value="autre"> Autre besoin</label>
+      </div>
+     </fieldset>
+
+     <fieldset>
+      <legend>Vos coordonnées</legend>
+      <div class="row">
+       <div class="field"><label for="nom">Nom et prénom <span class="req">*</span></label><input id="nom" name="nom" type="text" autocomplete="name" required maxlength="120"><div class="err"></div></div>
+       <div class="field"><label for="societe">Société / cabinet <span class="req">*</span></label><input id="societe" name="societe" type="text" autocomplete="organization" required maxlength="160"><div class="err"></div></div>
+      </div>
+      <div class="row">
+       <div class="field"><label for="email">E-mail <span class="req">*</span></label><input id="email" name="email" type="email" autocomplete="email" required maxlength="160"><div class="err"></div></div>
+       <div class="field"><label for="telephone">Téléphone</label><input id="telephone" name="telephone" type="tel" autocomplete="tel" maxlength="30"><div class="err"></div></div>
+      </div>
+     </fieldset>
+
+     <fieldset>
+      <legend>La mission</legend>
+      <div class="row">
+       <div class="field"><label for="pickup">Adresse d’enlèvement <span class="req">*</span></label><input id="pickup" name="pickup" type="text" autocomplete="off" placeholder="N°, rue, code postal, ville" required maxlength="240"><div class="err"></div></div>
+       <div class="field"><label for="delivery">Adresse de livraison <span class="req">*</span></label><input id="delivery" name="delivery" type="text" autocomplete="off" placeholder="N°, rue, code postal, ville" required maxlength="240"><div class="err"></div></div>
+      </div>
+      <div class="row">
+       <div class="field"><label for="pickupDate">Date d’enlèvement <span class="req">*</span></label><input id="pickupDate" name="pickupDate" type="date" required><div class="err"></div></div>
+       <div class="field"><label for="deliveryDate">Livraison souhaitée avant le</label><input id="deliveryDate" name="deliveryDate" type="date"><div class="err"></div></div>
+      </div>
+      <div class="row">
+       <div class="field"><label for="nature">Nature du chargement <span class="req">*</span></label>
+        <select id="nature" name="nature" required>
+         <option value="">Sélectionnez…</option>
+         <option>Documents / contrats</option>
+         <option>Prototypes / échantillons</option>
+         <option>Costumes / accessoires</option>
+         <option>Fret aérien</option>
+         <option>Autre</option>
+        </select><div class="err"></div></div>
+       <div class="field"><label for="urgence">Urgence</label>
+        <select id="urgence" name="urgence">
+         <option>Standard</option>
+         <option>Prioritaire (dans la journée)</option>
+         <option>Urgent (moins de 2 heures)</option>
+        </select></div>
+      </div>
+      <div class="row">
+       <div class="field"><label for="colis">Nombre de colis / valises</label><input id="colis" name="colis" type="number" min="1" step="1" inputmode="numeric"><div class="err"></div></div>
+       <div class="field"><label for="poids">Poids total (kg)</label><input id="poids" name="poids" type="number" min="0" step="0.1" inputmode="decimal"><div class="err"></div></div>
+      </div>
+      <div class="field"><label for="valeur">Valeur déclarée approximative (€)</label><input id="valeur" name="valeur" type="text" inputmode="numeric" maxlength="20"><p class="hint">Facultatif. Sert uniquement à définir les conditions d’assurance.</p></div>
+      <div class="field"><label for="message">Précisions</label><textarea id="message" name="message" maxlength="2000" placeholder="Contraintes horaires, contact sur place, consignes de remise, numéro de LTA…"></textarea></div>
+     </fieldset>
+
+     <div class="consent">
+      <input type="checkbox" id="consent" name="consent" required>
+      <div><label for="consent">J’accepte que CTA LOGISTICS traite ces informations pour répondre à ma demande de cotation. <a href="mentions-legales.html#donnees" target="_blank" rel="noopener">En savoir plus</a></label><div class="err"></div></div>
+     </div>
+     <div class="form-alert" id="formAlert" role="alert"></div>
+     <div style="margin-top:26px"><button class="btn btn-gold btn-block" id="submitBtn" type="submit">Envoyer ma demande</button></div>
+     <p class="form-note">* Champs obligatoires. Ne saisissez ici aucun contenu confidentiel : décrivez la nature du chargement, pas son contenu.</p>
+    </form>
+   </div>
+   <aside class="aside-box">
+    <h3>Ce qui se passe ensuite</h3>
+    <ul>
+     <li><strong>Immédiatement</strong>Vous recevez un accusé de réception avec votre référence.</li>
+     <li><strong>Sous 24 h ouvrées</strong>Nous revenons vers vous avec une cotation.</li>
+     <li><strong>À la mission</strong>Scellé, chauffeur dédié, remise en main propre, e-CMR.</li>
+    </ul>
+    <p style="margin:0;font-size:.92rem">Une urgence&nbsp;? Écrivez-nous à <a href="mailto:contact@cta-logistics.fr">contact@cta-logistics.fr</a> en indiquant « URGENT » en objet.</p>
+   </aside>
+  </div>
+ </div>
+</section>
+</main>
+<footer class="site-footer">
+ <div class="container">
+  <div class="footer-grid">
+   <div class="footer-brand">
+    <a class="brand" href="index.html" aria-label="CTA LOGISTICS"><span class="brand-mark">CTA</span><span class="brand-rule"></span><span class="brand-name">Logistics</span></a>
+    <p>Transport sécurisé de documents confidentiels, prototypes et pièces de valeur. Paris, Île-de-France, Europe.</p>
+   </div>
+   <div>
+    <h4>Offres</h4>
+    <ul>
+     <li><a href="protocole-chaine-fermee.html">Protocole Chaîne Fermée</a></li>
+     <li><a href="traction-roissy-cdg.html">Traction Roissy CDG</a></li>
+     <li><a href="devis.html">Demande de cotation</a></li>
+    </ul>
+   </div>
+   <div>
+    <h4>Informations</h4>
+    <ul>
+     <li><a href="mentions-legales.html">Mentions légales</a></li>
+     <li><a href="mentions-legales.html#donnees">Données personnelles</a></li>
+    </ul>
+   </div>
+   <div>
+    <h4>Contact</h4>
+    <ul>
+     <li>59 rue de Ponthieu, Bureau 326<br>75008 Paris</li>
+     <li><a href="mailto:contact@cta-logistics.fr">contact@cta-logistics.fr</a></li>
+    </ul>
+   </div>
+  </div>
+  <div class="legal-line">
+   <span>© 2026 CTA LOGISTICS — SAS au capital de 10 000 € · RCS Paris · SIREN 941 756 140</span>
+   <span>TVA FR66941756140</span>
+  </div>
+ </div>
+</footer>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
